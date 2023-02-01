@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <title>RK-Questions</title>
+
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+
+  <body>
+
+    <h1>Soal Ular Tangga</h1>
+
+    <div id="question-container">
+
+      <div class="question">
+
+        <p class="relative">Pilih Soal Sesuai Nomor Tujuan!</p>
+
+        <div class="answers">
+          <div class="answer" id="answer-1">1</div>
+          <!-- hanya perlu menampilkan satu elemen answer1 -->
+
+          <!-- elemen-elemen answer1 lainnya dapat disembunyikan -->
+        </div>
+        
+        <!-- kode JavaScript untuk membuat elemen answer1 lainnya -->
+        <script>
+          const answers = document.querySelector('.answers');
+          for (let i = 2; i <= 25; i++) {
+            const answer = document.createElement('div');
+            answer.classList.add('answer1');
+            answer.id = `answer-${i}`;
+            answer.innerHTML = i;
+            answers.appendChild(answer);
+          }
+        </script>
+        <div class="answers1">
+          <div class="answer1" id="answer-26">26</div>
+          <!-- hanya perlu menampilkan satu elemen answer1 -->
+         <!-- <div class="answer1" id="answer-27" style="display:none;"></div>-->
+          <!-- elemen-elemen answer1 lainnya dapat disembunyikan -->
+        </div>
+        
+        <!-- kode JavaScript untuk membuat elemen answer1 lainnya -->
+        <script>
+          const answers1 = document.querySelector('.answers1');
+          for (let i = 27; i <= 50; i++) {
+            const answer1 = document.createElement('div');
+            answer1.classList.add('answer1');
+            answer1.id = `answer-${i}`;
+            answer1.innerHTML = i;
+            answers1.appendChild(answer1);
+          }
+        </script>
+        
+      </div>
+
+    </div>
+    <div id="dice">
+        <img src="dadu/dice1.png" id="dice-img">
+      </div>
+      <div id="result"></div>
+    <script src="script.js"></script>
+
+  </body>
+</html>
